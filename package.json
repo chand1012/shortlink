@@ -1,0 +1,19 @@
+{
+    "name": "link-shortener",
+    "version": "1.0.0",
+    "description": "package for creating workers templates",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write '**/*.{js,css,json,md}'"
+    },
+    "author": "chand1012 <chandler@chand1012.dev>",
+    "license": "MIT",
+    "devDependencies": {
+        "prettier": "^1.17.0"
+    },
+    "dependencies": {
+        "randomstring": "^1.1.5",
+        "serverless-cloudflare-workers": "^1.2.0"
+    }
+}
