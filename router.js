@@ -1,3 +1,5 @@
+// from https://github.com/cloudflare/worker-template-router
+
 /**
  * Helper functions that when passed a request will return a
  * boolean indicating if the request uses that HTTP method,

@@ -12,6 +12,7 @@ async function handleRequest(request) {
     try {
         const r = new Router()
 
+        r.get('/', request => {return Response.redirect('https://chand1012.dev/', 301)}) // this will be changed
         r.post('/', request => newLink(request, LINKS))
         r.get('.*/.*', request => getLink(request, LINKS))
 

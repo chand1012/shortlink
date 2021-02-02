@@ -1,4 +1,4 @@
-name = "killurl"
+name = "shortlink"
 type = "webpack"
 account_id = ""
 workers_dev = true
