@@ -9,6 +9,7 @@ const newLink = async (request, LINKS) => {
             const value = {
                 link: body.link,
                 expire: body.expire || new Date(Date.now() + 3600000),
+                endpoint: randstr
             }
             const respData = JSON.stringify(value)
             await LINKS.put(randstr, respData)

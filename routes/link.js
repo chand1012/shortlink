@@ -1,21 +1,19 @@
 const getLink = async (request, LINKS) => {
     const url = request.url.split('/')
     const endpoint = url[url.length - 1]
-    console.log(endpoint);
-    const data = await LINKS.get(endpoint)
+    const data = JSON.parse(await LINKS.get(endpoint))
 
     if (data !== null) {
         const now = new Date(Date.now())
-        if (now < data.expire) {
+        const date = new Date(Date.parse(data.expire))
+        if (now < date){
             return Response.redirect(data.link, 302)
+        } else {
+            await LINKS.delete(endpoint)
         }
     }
 
-    if (data !== null) {
-        await LINKS.delete(endpoint)
-    }
-
-    return new Response('Link not found.', {
+    return new Response({error: 'Link not found.'}, {
         status: 404,
     })
 }
