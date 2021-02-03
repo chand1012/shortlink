@@ -12,10 +12,10 @@ async function handleRequest(request) {
     try {
         const r = new Router();
 
-        const indexTemplate = require("pug-loader!./templates/index.pug");
+        const indexTemplate = require("apply-loader!pug-loader!./templates/index.pug");
 
         r.get('/', request => {
-            return new Response(indexTemplate(), {
+            return new Response(indexTemplate, {
                 headers: { "content-type": "text/html;charset=UTF-8", },
             });
         }); // this will be changed
