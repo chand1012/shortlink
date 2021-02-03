@@ -12,8 +12,12 @@ async function handleRequest(request) {
     try {
         const r = new Router();
 
+        const indexTemplate = require("pug-loader!./templates/index.pug");
+
         r.get('/', request => {
-            return Response.redirect('https://chand1012.dev/', 301);
+            return new Response(indexTemplate(), {
+                headers: { "content-type": "text/html;charset=UTF-8", },
+            });
         }); // this will be changed
         r.post('/', request => newLink(request, LINKS));
         r.get('.*/.*', request => getLink(request, LINKS));
