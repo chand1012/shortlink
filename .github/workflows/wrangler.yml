@@ -18,7 +18,7 @@ jobs:
           echo 'type = "webpack"' >> wrangler.toml
           echo 'account_id = "${{ secrets.CF_ACCT_ID }}"' >> wrangler.toml
           echo 'workers_dev = true' >> wrangler.toml
-          echo 'route = ""' >> wrangler.toml
+          echo 'route = "shortlink.chand1012.net"' >> wrangler.toml
           echo 'zone_id = ""' >> wrangler.toml
           echo 'webpack_config = "webpack.config.js"' >> wrangler.toml
           echo 'kv_namespaces = [{binding = "LINKS", id = "${{ secrets.CF_KV_ID }}"}]' >> wrangler.toml
