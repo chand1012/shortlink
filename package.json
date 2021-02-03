@@ -10,7 +10,7 @@
     "author": "chand1012 <chandler@chand1012.dev>",
     "license": "MIT",
     "devDependencies": {
-        "prettier": "^1.17.0"
+        "prettier": "^2.2.1"
     },
     "dependencies": {
         "apply-loader": "^2.0.0",
