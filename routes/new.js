@@ -9,12 +9,13 @@ const newLink = async (request, LINKS) => {
             const value = {
                 link: body.link,
                 expire: body.expire || null,
-                endpoint: randstr,
                 count: 0
             }
-            const respData = JSON.stringify(value)
-            await LINKS.put(randstr, respData)
-            return new Response(respData, {
+            let respData = value;
+            respData['endpoint'] = randstr;
+            const kvData = JSON.stringify(value)
+            await LINKS.put(randstr, kvData)
+            return new Response(JSON.stringify(respData), {
                 status: 200,
             })
         }
