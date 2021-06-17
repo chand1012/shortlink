@@ -1,0 +1,10 @@
+name = "shortlink"
+type = "webpack"
+account_id = "c8c30db3dddc4ad31065d336368c7905"
+workers_dev = true
+routes = ["https://shortlink.chand1012.workers.dev/*", "https://share.riverways.app/*"]
+zone_id = ""
+webpack_config = "webpack.config.js"
+kv_namespaces = [ 
+         { binding = "LINKS", id = "4bca2ccc815c42c1b787dbdcd819240c", preview_id = "58d3c08620b84fc5878b802a6d571684" }
+]

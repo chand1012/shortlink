@@ -9,6 +9,7 @@ const newLink = async (request, LINKS) => {
             const value = {
                 link: body.link,
                 expire: body.expire || null,
+                resetTime: body.resetTime || false,
                 count: 0,
             };
             let respData = value;
